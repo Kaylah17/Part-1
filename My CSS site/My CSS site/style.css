@@ -1,0 +1,46 @@
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body{
+    background-color: rgb(236, 179, 253);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px 20px;
+ 
+}
+.team-section{
+    text-align: center;
+}
+.card{
+    background-color: rgb(164, 42, 235);
+    width: 400px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0);
+    text-align: center;
+    transition: transform 0.3s ease; box-shadow: 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20p(228, 100, 189);
+}
+
+.card img{
+    width: 250px;
+    border-radius: 50%;
+}
+.card p {
+    font-family: 'Times New Roman', Times, serif;
+}
+.card ul li{
+    list-style: none;
+    padding: 2px;
+}
+.card ul li{
+    background-color: blueviolet;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 8px;
+}
