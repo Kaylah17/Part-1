@@ -1,0 +1,24 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding-top: 50px;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+  }
