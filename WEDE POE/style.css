@@ -1,0 +1,186 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('CSS/css/img/morocco-blue.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: rgb(101, 176, 247);
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+    color: #0d47a1;
+    font-size: 48px;
+    font-weight: 800;
+    margin-top: 40px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif
+}
+.highlight{
+    color: #ffc107;
+    font-style: italic;
+}
+h2{
+    text-align: center;
+    color: yellow;
+    font-size: 28px;
+}
+
+.image-container img{
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 40px 8px rgba(0, 0, 0, 0.3);
+}
+
+.description{
+    max-width: 800px;
+    margin: 30px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: rgb(25, 143, 25);
+}
+p{
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 0 20px;
+    color: rgb(25, 143, 25);
+}
+nav{
+background-color: rgb(18, 134, 18);
+padding: 10px;
+text-align: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+.yellow-text{
+    color: yellow;
+}
+footer{
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb)
+    color(#333)
+}
+img{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 2)
+}
+.pricing-box{
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px auto;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #0d47a1;
+    font-weight: bold;
+}
+.cta-button{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #1976d2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+.cta-button:hover{
+    background-color: #0d47a1;
+}
+@media screen and (max-width: 768px){
+    .pricing-box{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+nav a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+}
+h1{
+    font-size: 24px;
+  }
+}
+
+@media sreen and (max-width: 480px){
+    body{
+        font-size: 16px;
+    }
+
+    .pricing-box{
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    nav a{
+        font-size: 18px;
+    }
+    img{
+        width: 100%;
+        height: auto
+    }
+}
+@keyframes pulse{
+    0% { transform: scale(1);}
+    50% { transform: scale(1.05);}
+    100% { transform: scale(1);}
+}
+.enroll-banner{
+    animation: pulse 2s infinite;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.dark-mode {
+    background-color: #031530;
+    color: white;
+}
