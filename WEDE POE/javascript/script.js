@@ -43,11 +43,11 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
     const error = document.getElementById("error");
 
     error.textContent="";
-
-  if (name === "" || email === "" || message ==="" || type === ""){
+})
+  if (name === "" || email === "" || message ==="" || type === "") {
     
     error.textContent ="Please fill in all the fields"
-    return
+    return;
   }
 
   
@@ -60,4 +60,4 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
 
 console.log("ccrpt.js is loaded!");
 
-})
+

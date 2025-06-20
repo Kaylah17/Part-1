@@ -41,6 +41,6 @@ The site includes media queries to asjust layout on:
 These breakpoints affect navigation layout,image sizes, and text formatting for beter usability on smaller screens.
 
 ## Author
-
-Created by [McKaylah]
+ 
+ Created by [McKaylah]
 For educational purposes.
