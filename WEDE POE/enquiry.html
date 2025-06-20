@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enquiry Page</title>
+
+  <style>
+
+    body { font-family: Arial, sans-serif; padding: 20px; }
+
+    form { max-width: 500px; margin: auto; background: #d9eaf1; padding: 20px; border-radius: 8px; }
+
+    input, textarea, select { width: 100%; padding: 10px; margin-bottom: 10px; }
+
+    button { background: #05871b; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <h2>Submit an Enquiry</h2>
+
+
+
+  <form id="enquiryForm" onsubmit="return handleEnquiry()">
+
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <select id="type" required>
+
+      <option value="">-- Select Enquiry Type --</option>
+
+      <option value="service">Tutoring Service</option>
+
+      <option value="volunteer">Become a Volunteer</option>
+
+      <option value="sponsor">Become a Sponsor</option>
+
+    </select>
+
+    <textarea id="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+
+
+  <p id="response"></p>
+
+
+
+  <script>
+
+    function handleEnquiry() {
+
+      const name = document.getElementById("name").value.trim();
+
+      const email = document.getElementById("email").value.trim();
+
+      const type = document.getElementById("type").value;
+
+      const message = document.getElementById("message").value.trim();
+
+      const response = document.getElementById("response");
+
+
+
+      if (!name || !email || !type || !message) {
+
+        response.style.color = "red";
+
+        response.innerText = "Please fill in all fields.";
+
+        return false;
+
+      }
+
+
+
+      let reply = "";
+
+
+
+      switch (type) {
+
+        case "service":
+
+          reply = `Hi ${name}, our products start at R500. We'll contact you soon at ${email}.`;
+
+          break;
+
+        case "volunteer":
+
+          reply = `Thank you, ${name}! We’ll reach out to you with volunteering opportunities.`;
+
+          break;
+
+        case "sponsor":
+
+          reply = `Hi ${name}, we’ll contact you at ${email} with sponsorship packages. Thank you!`;
+
+          break;
+
+        default:
+
+          reply = "Something went wrong.";
+
+      }
+
+
+
+      response.style.color = "yellow";
+
+      response.innerText = reply;
+
+      document.getElementById("enquiryForm").reset();
+
+      return false;
+
+    }
