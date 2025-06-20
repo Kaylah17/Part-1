@@ -43,7 +43,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
     const error = document.getElementById("error");
 
     error.textContent="";
-})
+
   if (name === "" || email === "" || message ==="" || type === "") {
     
     error.textContent ="Please fill in all the fields"
@@ -57,7 +57,8 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
   window.location.href = `mailto: st10458045@rcconnect.edu.za?subject=${encodeURIComponent(body)}`;
 
   alert("Form submitted successfully")
-
+}
+)
 console.log("ccrpt.js is loaded!");
 
 
