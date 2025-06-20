@@ -36,19 +36,20 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
   
     const email = document.getElementById("email").value.trim();
   
-    const type = document.getElementById("type").value.trim()
+    const type = document.getElementById("type").value
   
     const message = document.getElementById("message").value.trim();
   
     const error = document.getElementById("error");
 
     error.textContent="";
-  
+
   if (name === "" || email === "" || message ==="" || type === ""){
     
     error.textContent ="Please fill in all the fields"
     return
   }
+
   
   const subject = "Message from" + name;
   const body = "Name: " + name + "nEmail: " + email + "nMessage: " + message;
@@ -57,9 +58,6 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
 
   alert("Form submitted successfully")
 
-    
-}
-)
-  
-  
-    
+console.log("ccrpt.js is loaded!");
+
+})
