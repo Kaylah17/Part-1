@@ -56,7 +56,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
 
   window.location.href = `mailto: st10458045@rcconnect.edu.za?subject=${encodeURIComponent(body)}`;
 
-  alert("Form submitted successfully")
+  alert("Form submitted successfully");
 }
 )
 console.log("ccrpt.js is loaded!");
