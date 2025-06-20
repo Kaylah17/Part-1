@@ -28,82 +28,38 @@ setTimeout(updateCounter, 30);
 
 window.onload = updateCounter;
 
-function handleEnquiry() {
+document.getElementById("enquiryForm").addEventListener("submit", function(event){
+  event.preventDefault(); //preventing the form from submitting before we are done
+
 
     const name = document.getElementById("name").value.trim();
   
     const email = document.getElementById("email").value.trim();
   
-    const type = document.getElementById("type").value;
+    const type = document.getElementById("type").value.trim()
   
     const message = document.getElementById("message").value.trim();
   
-    const response = document.getElementById("response");
+    const error = document.getElementById("error");
+
+    error.textContent="";
   
-  
-  
-    if (!name || !email || !type || !message) {
-  
-      response.style.color = "red";
-  
-      response.innerText = "Please fill in all fields.";
-  
-      return false;
-  
-    }
-  
-  
-  
-    let reply = "";
-  
-  
-  
-    switch (type) {
-  
-      case "service":
-  
-        reply = `Thank you ${name}! We’ve received your product/service enquiry. Prices start at R500. We’ll contact you at ${email} with availability details.`;
-  
-        break;
-  
-      case "volunteer":
-  
-        reply = `Thanks ${name}! We’re excited you're interested in volunteering. We’ll follow up with upcoming opportunities via ${email}.`;
-  
-        break;
-  
-      case "sponsor":
-  
-        reply = `Dear ${name}, thank you for your interest in sponsoring us. We’ll email you sponsorship options and packages at ${email}.`;
-  
-        break;
-  
-      default:
-  
-        reply = "Something went wrong. Please try again.";
-  
-    }
-  
-  
-  
-    response.style.color = "green";
-  
-    response.innerText = "Thank you for your enquiry, we'll get back to you shortly."
-  
-  
-  
-    // Clear form after submission (optional)
-  
-    document.getElementById("enquiryForm").reset();
-  
-  
-  
-    return false; // Prevent actual form sub
-  
+  if (name === "" || email === "" || message ==="" || type === ""){
+    
+    error.textContent ="Please fill in all the fields"
+    return
   }
   
+  const subject = "Message from" + name;
+  const body = "Name: " + name + "nEmail: " + email + "nMessage: " + message;
 
-  
-  
+  window.location.href = `mailto: st10458045@rcconnect.edu.za?subject=${encodeURIComponent(body)}`;
+
+  alert("Form submitted successfully")
+
     
+}
+)
+  
+  
     

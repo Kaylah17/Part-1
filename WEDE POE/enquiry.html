@@ -9,37 +9,25 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="stylesheet" href="style.css">
   <title>Enquiry Page</title>
-
-  <style>
-
-    body { font-family: Arial, sans-serif; padding: 20px; }
-
-    form { max-width: 500px; margin: auto; background: #d9eaf1; padding: 20px; border-radius: 8px; }
-
-    input, textarea, select { width: 100%; padding: 10px; margin-bottom: 10px; }
-
-    button { background: #05871b; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; }
-
-  </style>
 
 </head>
 
 <body>
 
+  <h2>Enquire</h2>
+  <br><br>
 
+  <form id="enquiryForm">
+    Name:<br>
+    <input type="text" id="name" placeholder="Your Name"><br><br>
 
-  <h2>Submit an Enquiry</h2>
+    Email:<br>
+    <input type="email" id="email" placeholder="Your Email"><br><br>
 
-
-
-  <form id="enquiryForm" onsubmit="return handleEnquiry()">
-
-    <input type="text" id="name" placeholder="Your Name" required>
-
-    <input type="email" id="email" placeholder="Your Email" required>
-
-    <select id="type" required>
+    Type:<br>
+    <select id="type">
 
       <option value="">-- Select Enquiry Type --</option>
 
@@ -51,84 +39,156 @@
 
     </select>
 
-    <textarea id="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+    Message:<br>
+    <textarea id="message" rows="5" cols="30"></textarea><br><br>
 
     <button type="submit">Submit</button>
 
+
   </form>
+  <p id="error" style="color:red;"></p>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<style>
+
+  body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background: #e5edf9;
+
+    margin: 0;
+
+    padding: 40px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+  }
 
 
 
-  <p id="response"></p>
+  .enquiry-container {
+
+    background-color: #fff;
+
+    padding: 30px 40px;
+
+    max-width: 600px;
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  }
 
 
 
-  <script>
+  h2 {
 
-    function handleEnquiry() {
+    text-align: center;
 
-      const name = document.getElementById("name").value.trim();
+    color: #333;
 
-      const email = document.getElementById("email").value.trim();
+    margin-bottom: 25px;
 
-      const type = document.getElementById("type").value;
-
-      const message = document.getElementById("message").value.trim();
-
-      const response = document.getElementById("response");
+  }
 
 
 
-      if (!name || !email || !type || !message) {
+  input, textarea, select {
 
-        response.style.color = "red";
+    width: 100%;
 
-        response.innerText = "Please fill in all fields.";
+    padding: 12px;
 
-        return false;
+    margin-top: 8px;
 
-      }
+    margin-bottom: 20px;
 
+    border: 1px solid #ccc;
 
+    border-radius: 6px;
 
-      let reply = "";
+    font-size: 16px;
 
+    transition: border-color 0.3s;
 
-
-      switch (type) {
-
-        case "service":
-
-          reply = `Hi ${name}, our products start at R500. We'll contact you soon at ${email}.`;
-
-          break;
-
-        case "volunteer":
-
-          reply = `Thank you, ${name}! We’ll reach out to you with volunteering opportunities.`;
-
-          break;
-
-        case "sponsor":
-
-          reply = `Hi ${name}, we’ll contact you at ${email} with sponsorship packages. Thank you!`;
-
-          break;
-
-        default:
-
-          reply = "Something went wrong.";
-
-      }
+  }
 
 
 
-      response.style.color = "yellow";
+  input:focus, textarea:focus, select:focus {
 
-      response.innerText = reply;
+    border-color: #129922;
 
-      document.getElementById("enquiryForm").reset();
+    outline: none;
 
-      return false;
+  }
 
-    }
+
+
+  button {
+
+    width: 100%;
+
+    background-color: #12883f;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+  }
+
+
+
+  button:hover {
+
+    background-color: #1b4f72;
+
+  }
+
+
+
+  #response {
+
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+  }
+
+</style>
+
+
+
+
+
+    
+   
+
